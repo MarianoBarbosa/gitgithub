@@ -1,0 +1,180 @@
+/*** reseteo ***/
+
+
+*{ 
+    margin: 0;
+    padding: 0;
+
+}  
+
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+
+
+/*** grid ***/
+
+.logoTorneo{ 
+    
+    width: 100%;
+    display: grid; 
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas: 
+    "header header header"
+"tituloTorneo tituloTorneo tituloTorneo"
+"equipo1 equipo2 equipo3" 
+"equipo4 equipo5 equipo6" 
+"equipo7 equipo8 equipo9" 
+"footer footer footer"
+}
+body{
+    background-color: white;
+    font-family: 'League Gothic', sans-serif; 
+
+ 
+ }
+
+/*** encabezado ***/
+ header{
+
+    grid-area: header;
+    background-color: powderblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.logo{ 
+    width: 15%;
+    margin-left: 30px;
+}
+.barraNavegacion ul{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.barraNavegacion ul li, footer ul li{ 
+    list-style-type: none;
+    margin: 0 20px;
+  }
+  .barraNavegacion ul li a, footer ul li a{
+    color: black;
+    text-decoration: none;
+  }
+
+  /*** Titulo ***/
+
+.tituloTorneo{
+    grid-area: tituloTorneo;
+    text-align:  center;
+    color: black;
+   
+}
+
+/*** grillaEquipos ***/ 
+.grillaEquipos2022{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grillaEquipos2022 img{ width: 50%;}
+
+.equipo1{ 
+    grid-area: equipo1;
+}
+.equipo2{ 
+    grid-area: equipo2;
+}
+.equipo3{ 
+    grid-area: equipo3;
+}
+.equipo4{ 
+    grid-area: equipo4;
+}
+.equipo5{
+    grid-area: equipo5;
+}
+.equipo6{ 
+    grid-area: equipo6;
+}
+.equipo7{ 
+    grid-area: equipo7;
+}
+.equipo8{
+    grid-area: equipo8;
+}
+.equipo9{
+    grid-area: equipo9;
+}
+footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200;
+    background-color: gainsboro;
+   
+}
+footer nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+ }
+/***area para 768px ***/
+
+@media(max-width:768px) 
+{ .logoTorneo{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: "header header"
+    "tituloTorneo "
+    "equipo1 equipo2"
+    "equipo3 equipo4"
+    "equipo5 equipo6"
+    "equipo7 equipo8"
+    "equipo9 equipo9"
+    "footer footer";
+
+
+} }
+
+
+/***mobile first para res 480px***/
+@media(max-width:480px)
+{
+    .logoTorneo {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-areas: 
+        "header"
+        "tituloTorneo"
+        "equipo1"
+        "equipo2"
+        "equipo3"
+        "equipo4"
+        "equipo5"
+        "equipo6"
+        "equipo7"
+        "equipo8"
+        "equipo9"
+        "footer"    ;
+    }
+
+}    
+
+
+ 
+
+
+
+
+
+
+
+    
+ 
