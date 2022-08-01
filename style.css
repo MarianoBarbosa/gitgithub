@@ -10,6 +10,7 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
 
 
+
 /*** grid ***/
 
 .logoTorneo{ 
@@ -69,8 +70,26 @@ body{
     grid-area: tituloTorneo;
     text-align:  center;
     color: black;
-   
+
 }
+/** transi ***/
+.grillaEquipos2022 :hover{
+    animation: equipos 4s;
+}
+@keyframes equipos {
+    0%{
+       border-radius: 20px;
+    }
+    25% { transform: rotate (90deg);
+    }
+75%{
+    transform: scale(2);
+}
+    99%{ 
+       transform: translateX(300px);}    
+}
+
+
 
 /*** grillaEquipos ***/ 
 .grillaEquipos2022{ 
@@ -166,6 +185,7 @@ footer nav ul{
     }
 
 }    
+
 
 
  
